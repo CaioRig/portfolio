@@ -12,10 +12,10 @@ Sistema que simula as funcionalidades do aplicativo Spotify.
 
 - [x] Criação de playlists
 - [x] Seleção de playlists
-- [x] Deletamento de playlists
+- [x] Deletar playlists
 - [x] Adicionar músicas às playlists
 - [x] Remover músicas da playlist
-- [x] Selecionar e tocar música
+- [x] Selecionar e tocar música (template)
 
 ### 🛠 Tecnologias
 
