@@ -1,5 +1,7 @@
 # Projeto Labefy
 
+Sistema que simula as funcionalidades do aplicativo Spotify.
+
 ### Experimente: 
 <a href="http://superb-leg.surge.sh"> Labefy </a>
 
