@@ -7,6 +7,7 @@ const ContainerMensagensLog = styled.div`
     width: 85vw;
     margin: 15px;
     border: 2px solid black;
+    border-radius: 10px 10px
 `
 
 const ContainerMensagensIndividual = styled.div`
