@@ -1,0 +1,35 @@
+### GET PKM BY NAME
+
+GET http://localhost:3306/pkm/data
+Content-Type: application/json
+
+{
+    "name": "bu"
+}
+
+### GET PKM BY TYPE
+
+GET http://localhost:3306/pkm/type
+Content-Type: application/json
+
+{
+    "type": "fi"
+}
+
+### GET PKM BY POKEDEX NUMBER
+
+GET http://localhost:3306/pkm/pokedex
+Content-Type: application/json
+
+{
+    "pokedexNumber": "276"
+}
+
+### GET PKM EVOLUTIONS BY NAME
+
+GET http://localhost:3306/pkm/evolutions
+Content-Type: application/json
+
+{
+    "name": "Pikachu"
+}
