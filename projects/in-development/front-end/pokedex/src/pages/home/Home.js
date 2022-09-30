@@ -47,7 +47,6 @@ function PkmCard() {
                                     </CardActions>
                                 </Card>
                             </Grid2>
-
                         )
                     })
         }
