@@ -8,13 +8,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import GlobalStateContext from '../../global/GlobalStateContext';
+import { goToDetails } from '../../router/Coordinator';
+import { useNavigate } from 'react-router-dom';
 
 function PkmCard() {
+    const navigate = useNavigate()
     const data = useContext(GlobalStateContext)
-
-    React.useEffect(() => {
-
-    }, [])
 
     return <>
         {
@@ -26,7 +25,11 @@ function PkmCard() {
                     .map((pkm) => {
                         return (
                             <Grid2 xs={3}>
-                                <Card key={pkm.id} sx={{ maxWidth: '25vw' }}>
+                                <Card key={pkm.id}
+                                    sx={{
+                                        maxWidth: '25vw',
+                                        minHeight: '100%'
+                                    }}>
                                     <CardMedia
                                         component="img"
                                         height="100%"
@@ -34,16 +37,42 @@ function PkmCard() {
                                         alt={pkm.name}
                                     />
                                     <CardContent>
-                                        <Typography key={pkm.id} gutterBottom variant="h5" component="div">
+                                        <Typography key={pkm.id}
+                                            style={{ textTransform: 'capitalize' }}
+                                            gutterBottom
+                                            variant="h5"
+                                            component="div"
+                                            align='center'>
                                             {pkm.name}
                                         </Typography>
-                                        <Typography variant="h5" color="text.secondary">
-                                            {pkm.types[0].type.name}
-                                        </Typography>
+                                        {
+                                            pkm.types.map((type) => {
+                                                return <>
+                                                    <Typography
+                                                        key={type.type.name}
+                                                        style={{ textTransform: 'capitalize' }}
+                                                        variant="h5"
+                                                        color="text.secondary"
+                                                        align='center'>
+                                                        {type.type.name}
+                                                    </Typography>
+                                                </>
+                                            })
+                                        }
                                     </CardContent>
-                                    <CardActions>
-                                        <Button size="small">Details</Button>
-                                        <Button size="small">Add To Pokedex</Button>
+                                    <CardActions style={{
+                                        display: 'flex',
+                                        justifyContent: 'space-around'
+                                    }}>
+                                        <Button onClick={()=> goToDetails(navigate, pkm.name)}
+                                        variant='outlined'
+                                            size="small">
+                                            Details
+                                        </Button>
+                                        <Button variant='outlined'
+                                            size="small">
+                                            Add To Pokedex
+                                        </Button>
                                     </CardActions>
                                 </Card>
                             </Grid2>
@@ -56,7 +85,10 @@ function PkmCard() {
 
 export const Home = () => {
     return (
-        <Grid2 container spacing={2} disableEqualOverflow>
+        <Grid2 container
+            spacing={2}
+            disableEqualOverflow
+            style={{ marginTop: '1vh' }}>
             <PkmCard />
         </Grid2>
     )

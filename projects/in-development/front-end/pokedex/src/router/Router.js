@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import Header from '../components/Header';
 import { Home } from '../pages/home/Home';
+import { Details } from '../pages/details/Details';
 
 export const Router = () => {
     return (
@@ -12,6 +13,8 @@ export const Router = () => {
             <Header />
             <Routes>
                 <Route index element={<Home />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/details/:name' element={<Details />} />
             </Routes>
         </BrowserRouter>
     )
