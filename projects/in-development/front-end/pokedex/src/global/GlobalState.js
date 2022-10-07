@@ -31,7 +31,6 @@ const GlobalState = (props) => {
                     .get(url)
                     .then((res) => {
                         individualData.push(res.data)
-                        console.log(individualData)
                         if (individualData.length >= 19) {
                             setLoading(false)
                         }

@@ -82,7 +82,6 @@ function PkmCard() {
     </>
 }
 
-
 export const Home = () => {
     return (
         <Grid2 container
