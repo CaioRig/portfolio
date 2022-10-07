@@ -15,6 +15,15 @@ export default function GameSelector(props) {
         contestDate = props.contestDate,
         isLoadingNumbers = props.isLoadingNumbers;
 
+    const colors = {
+        0: '#6BEFA3',
+        1: '#8666EF',
+        2: '#DD7AC6',
+        3: '#FFAB64',
+        4: '#5AAD7D',
+        5: '#BFAF83'
+    }
+
     const renderLogo = () => {
         if (!data.isLoadingName && gameSelected !== "") {
             let name = data.gameName[gameSelected].nome
@@ -84,7 +93,7 @@ export default function GameSelector(props) {
                 minWidth: '30vw',
                 maxWidth: '30vw',
                 width: 'fit-content',
-                bgcolor: '#6BEFA3',
+                bgcolor: colors[gameSelected],
                 height: '100vh',
                 display: 'flex',
                 flexDirection: 'column',
@@ -128,9 +137,9 @@ export default function GameSelector(props) {
                 </Select>
             </FormControl>
             {data.isLoadingName && gameSelected !== ""
-            ? <CircularProgress color="success" />
-            :            
-            renderLogo()}
+                ? <CircularProgress color="success" />
+                :
+                renderLogo()}
             {isLoadingNumbers
                 ?
                 <CircularProgress color="success" />

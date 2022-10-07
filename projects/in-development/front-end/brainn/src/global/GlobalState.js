@@ -13,7 +13,6 @@ const GlobalState = (props) => {
         isLoadingContest
     }
 
-
     return (
         <GlobalContext.Provider value={globalData}>
             {props.children}
