@@ -1,21 +1,23 @@
-# Projeto Brainn - Loterias
+# Project Brainn - Lottery Simulator
 
-Experimente:
+Lotery simulator page created for study involving React.js and API consumption. 
+
+Try it:
 https://gusty-toys.surge.sh/
 
-### Desenvolvedor: 
+### Developer: 
 - Caio Sala Rigotto
 
 ### Features
 
-- [x] Página Home
-- [x] Selecionador de jogos
-- [x] Cor de fundo da aba da esquerda muda de acordo com o jogo selecionado
-- [x] Consumo de API's que simula jogos de loterias, incluindo números de concursos, data e números de bolas sorteadas 
+- [x] Home page
+- [x] Game selector
+- [x] Left frame background color, name and contest number changes depending on the selected game
+- [x] API consumption which simulates a lottery game, including constest numbers, names and drawn balls
 
-### 🛠 Tecnologias
+### 🛠 Technologies
 
-As seguintes ferramentas foram utilizadas na construção do projeto:
+These technologies were used in this project development:
 
 - [JAVASCRIPT]
 - [CSS]
@@ -24,3 +26,4 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 - [REACT.JS]
 - [REACT-ROUTER-DOM]
 - [MATERIAL-UI]
+- [GLOBAL-STATE]
