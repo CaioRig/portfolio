@@ -7,10 +7,10 @@ Página que simula um sistema de loterias criada para estudo envolvendo React.js
 Try it/Experimente: <br/>
 https://gusty-toys.surge.sh/
 
-### Developer/Desenvolvedor: 
+### Developer / Desenvolvedor: 
 - Caio Sala Rigotto
 
-### Features:
+### Features / Recursos:
 
 - [x] Home page <br/>
       Página Home
@@ -21,7 +21,7 @@ https://gusty-toys.surge.sh/
 - [x] API consumption which simulates a lottery game, including constest numbers, names and drawn balls <br/>
       Uma API é consumida a qual simula um jogo de loteria, incluindo números de concurso, nome de jogos e bolas sorteadas
 
-### 🛠 Technologies:
+### 🛠 Technologies / Tecnologias:
 
 These technologies were used in this project development:
 
