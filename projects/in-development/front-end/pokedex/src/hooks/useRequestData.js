@@ -20,7 +20,6 @@ const useRequestData = (url) => {
         fetchData()
             .catch((err) => {
                 alert(err)
-                setLoading(false)
             })
     }, [url])
     return [data, isLoading]

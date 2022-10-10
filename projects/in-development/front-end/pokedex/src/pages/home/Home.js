@@ -10,6 +10,8 @@ import Grid2 from '@mui/material/Unstable_Grid2';
 import GlobalStateContext from '../../global/GlobalStateContext';
 import { goToDetails } from '../../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
+import { CircularProgress } from '@mui/material';
+import Pokeball from '../../img/Pokeball.png'
 
 function PkmCard() {
     const navigate = useNavigate()
@@ -18,7 +20,7 @@ function PkmCard() {
     return <>
         {
             data.isLoadingGlobal
-                ? <p>Loading</p>
+                ? <CircularProgress color='info' />
                 :
                 data.pkmData
                     .sort(function (a, b) { return a.id - b.id })
@@ -43,7 +45,7 @@ function PkmCard() {
                                             variant="h5"
                                             component="div"
                                             align='center'>
-                                            {pkm.name}
+                                            #{pkm.id} {pkm.name}
                                         </Typography>
                                         {
                                             pkm.types.map((type) => {
@@ -64,8 +66,8 @@ function PkmCard() {
                                         display: 'flex',
                                         justifyContent: 'space-around'
                                     }}>
-                                        <Button onClick={()=> goToDetails(navigate, pkm.name)}
-                                        variant='outlined'
+                                        <Button onClick={() => goToDetails(navigate, pkm.name)}
+                                            variant='outlined'
                                             size="small">
                                             Details
                                         </Button>
@@ -81,7 +83,6 @@ function PkmCard() {
         }
     </>
 }
-
 export const Home = () => {
     return (
         <Grid2 container
