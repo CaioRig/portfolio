@@ -2,7 +2,7 @@
 
 Lotery simulator page created for study involving React.js and API consumption. 
 
-Página que simula um sistema de loterias criada para estudo envolvendo React.js e consumos de API
+Página que simula um sistema de loterias criada para estudos envolvendo React.js e consumos de API
 
 Try it/Experimente: <br/>
 https://gusty-toys.surge.sh/
