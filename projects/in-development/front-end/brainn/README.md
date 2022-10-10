@@ -12,13 +12,13 @@ https://gusty-toys.surge.sh/
 
 ### Features:
 
-- [x] Home page
+- [x] Home page <br/>
       Página Home
-- [x] Game selector
+- [x] Game selector <br/>
       Selecionador de jogos
-- [x] Left frame background color, name and contest number changes depending on the selected game
+- [x] Left frame background color, name and contest number changes depending on the selected game <br/>
       Barra lateral da esquerda muda de cor, nome do jogo e concurso de acordo com o jogo selecionado
-- [x] API consumption which simulates a lottery game, including constest numbers, names and drawn balls
+- [x] API consumption which simulates a lottery game, including constest numbers, names and drawn balls <br/>
       Uma API é consumida a qual simula um jogo de loteria, incluindo números de concurso, nome de jogos e bolas sorteadas
 
 ### 🛠 Technologies:
