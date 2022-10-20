@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { useParams } from "react-router-dom"
-import BASE_URL from "../../constants/BASE_URL"
-import useRequestData from "../../hooks/useRequestData"
+import { useParams } from "react-router-dom";
+import BASE_URL from "../../constants/BASE_URL";
+import useRequestData from "../../hooks/useRequestData";
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { CircularProgress, Typography, CardMedia } from '@mui/material';
+import { CircularProgress, Typography } from '@mui/material';
 
 export const Details = () => {
     const pkmName = useParams()

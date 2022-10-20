@@ -11,7 +11,6 @@ import GlobalStateContext from '../../global/GlobalStateContext';
 import { goToDetails } from '../../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
-import Pokeball from '../../img/Pokeball.png'
 
 function PkmCard() {
     const navigate = useNavigate()
@@ -33,13 +32,16 @@ function PkmCard() {
                                         minHeight: '100%'
                                     }}>
                                     <CardMedia
+                                        onClick={() => goToDetails(navigate, pkm.name)}
                                         component="img"
                                         height="100%"
                                         image={pkm.sprites.other.home.front_default}
                                         alt={pkm.name}
                                     />
                                     <CardContent>
-                                        <Typography key={pkm.id}
+                                        <Typography
+                                            onClick={() => goToDetails(navigate, pkm.name)}
+                                            key={pkm.id}
                                             style={{ textTransform: 'capitalize' }}
                                             gutterBottom
                                             variant="h5"
