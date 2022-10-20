@@ -1,5 +1,7 @@
 # Projeto Pokemon Go
 
+Projeto back-end que injeta as informações de pokemons do jogo Pokemon Go em um banco de dados e as torna disponíveis para consumo
+
 ### Desenvolvedor: 
 - Caio Sala Rigotto
 
