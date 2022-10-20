@@ -1,4 +1,4 @@
-# Project Brainn - Lottery Simulator
+# Project Lottery Simulator
 
 Lotery simulator page created for study involving React.js and API consumption. 
 
