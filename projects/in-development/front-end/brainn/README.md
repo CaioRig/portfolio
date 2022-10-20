@@ -34,4 +34,3 @@ Estas tecnologias foram usadas no desenvolvimento deste projeto:
 - [REACT.JS]
 - [REACT-ROUTER-DOM]
 - [MATERIAL-UI]
-- [GLOBAL-STATE]
