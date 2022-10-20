@@ -5,6 +5,8 @@ Project created for studying purposes which consumes data from a pokedex API (ht
 
 Projeto criado para propósitos de estudo que consome data de uma API de pokedex (https://pokeapi.co/).
 
+[Pokedex](https://synonymous-care.surge.sh/)
+
 ### Developer / Desenvolvedor: 
 - Caio Sala Rigotto
 
