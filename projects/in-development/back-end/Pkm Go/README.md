@@ -19,5 +19,3 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 - [KNEX]
 - [EXPRESS]
 - [MYSQL]
-
-https://github.com/RedFoxTech/vaga-backend-teste
