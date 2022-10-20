@@ -7,3 +7,7 @@
 # Back-End:
 
 ## [Pokemon Go Database](https://github.com/CaioRig/resume-curriculo/tree/main/projects/in-development/back-end/Pkm%20Go)
+
+# Full-Stack:
+
+## [Shopping-cart](https://github.com/CaioRig/resume-curriculo/tree/main/projects/in-development/full-stack/shopping-cart)
