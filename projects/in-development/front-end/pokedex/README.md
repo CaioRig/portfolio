@@ -17,7 +17,7 @@ Try it out - Experimente:
     Página Home
 - [x] Pokemon cards with name and type information <br/>
     Cards de pokemon com informações de nome e tipo
-- [x] Details page showing pokemon status, moves and type information <br/>
+- [ ] Details page showing pokemon status, moves and type information <br/>
     Página de detalhes mostrando informações de status, golpes e tipos 
 - [ ] Pokedex page which you can save pokemons for future research <br/>
     Página de pokedex onde você pode salvar pokemons para pesquisas futuras
