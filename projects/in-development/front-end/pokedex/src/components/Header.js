@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import pokeballLogo from '../img/Pokeball.png'
 import { goToHome } from '../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
 

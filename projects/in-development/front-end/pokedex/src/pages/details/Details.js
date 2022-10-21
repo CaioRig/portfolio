@@ -22,12 +22,15 @@ export const Details = () => {
                     <Container maxWidth="80vw"
                     >
                         <Box sx={{
-                            bgcolor: bgColors[pkmDetails.types[0].type.name],
                             height: '85vh',
                             display: 'flex',
                             gap: '3vw',
                             justifyContent: 'center',
-                            borderRadius: "10px"
+                            borderRadius: "10px",
+                            bgcolor: bgColors[pkmDetails.types[0].type.name],
+                            backgroundImage: `url(${pkmDetails.sprites.other.home.front_default})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center'
                         }}
                         >
                             <Typography
