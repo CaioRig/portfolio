@@ -8,9 +8,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import GlobalStateContext from '../../global/GlobalStateContext';
+import pokeballLogo from '../../img/Pokeball.png'
+import bgColors from '../../constants/bgColors';
 import { goToDetails } from '../../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Container } from '@mui/material';
 
 function PkmCard() {
     const navigate = useNavigate()
@@ -29,7 +31,12 @@ function PkmCard() {
                                 <Card key={pkm.id}
                                     sx={{
                                         maxWidth: '25vw',
-                                        minHeight: '100%'
+                                        minHeight: '90%',
+                                        backgroundColor: bgColors[pkm.types[0].type.name],
+                                        backgroundImage: `url(${pokeballLogo})`,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundPosition: "center",
+                                        backgroundSize: "85%"
                                     }}>
                                     <CardMedia
                                         onClick={() => goToDetails(navigate, pkm.name)}
@@ -49,20 +56,25 @@ function PkmCard() {
                                             align='center'>
                                             #{pkm.id} {pkm.name}
                                         </Typography>
-                                        {
-                                            pkm.types.map((type) => {
-                                                return <>
-                                                    <Typography
-                                                        key={type.type.name}
-                                                        style={{ textTransform: 'capitalize' }}
-                                                        variant="h5"
-                                                        color="text.secondary"
-                                                        align='center'>
-                                                        {type.type.name}
-                                                    </Typography>
-                                                </>
-                                            })
-                                        }
+                                        <Container sx={{
+                                            display: "flex",
+                                            justifyContent: "space-evenly"
+                                        }}>
+                                            {
+                                                pkm.types.map((type) => {
+                                                    return <>
+                                                        <Typography
+                                                            key={type.type.name}
+                                                            style={{ textTransform: 'capitalize' }}
+                                                            variant="h5"
+                                                            color="text.secondary"
+                                                            align='center'>
+                                                            {type.type.name}
+                                                        </Typography>
+                                                    </>
+                                                })
+                                            }
+                                        </Container>
                                     </CardContent>
                                     <CardActions style={{
                                         display: 'flex',
@@ -88,9 +100,10 @@ function PkmCard() {
 export const Home = () => {
     return (
         <Grid2 container
-            spacing={2}
+            spacing={3}
             disableEqualOverflow
-            style={{ marginTop: '1vh' }}>
+            style={{ marginTop: '1vh' }}
+        >
             <PkmCard />
         </Grid2>
     )
