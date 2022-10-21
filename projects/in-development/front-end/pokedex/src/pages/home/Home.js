@@ -49,7 +49,9 @@ function PkmCard() {
                                         <Typography
                                             onClick={() => goToDetails(navigate, pkm.name)}
                                             key={pkm.id}
-                                            style={{ textTransform: 'capitalize' }}
+                                            style={{
+                                                textTransform: 'capitalize',
+                                            }}
                                             gutterBottom
                                             variant="h5"
                                             component="div"
@@ -82,10 +84,12 @@ function PkmCard() {
                                     }}>
                                         <Button onClick={() => goToDetails(navigate, pkm.name)}
                                             variant='outlined'
+                                            color='inherit'
                                             size="small">
                                             Details
                                         </Button>
                                         <Button variant='outlined'
+                                            color='inherit'
                                             size="small">
                                             Add To Pokedex
                                         </Button>
