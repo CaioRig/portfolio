@@ -6,6 +6,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { CircularProgress, Typography } from '@mui/material';
+import bgColors from '../../constants/bgColors';
 
 export const Details = () => {
     const pkmName = useParams()
@@ -21,11 +22,12 @@ export const Details = () => {
                     <Container maxWidth="80vw"
                     >
                         <Box sx={{
-                            bgcolor: '#cfe8fc',
-                            height: '80vh',
+                            bgcolor: bgColors[pkmDetails.types[0].type.name],
+                            height: '85vh',
                             display: 'flex',
                             gap: '3vw',
-                            justifyContent: 'center'
+                            justifyContent: 'center',
+                            borderRadius: "10px"
                         }}
                         >
                             <Typography

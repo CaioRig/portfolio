@@ -67,7 +67,9 @@ function PkmCard() {
                                                     return <>
                                                         <Typography
                                                             key={type.type.name}
-                                                            style={{ textTransform: 'capitalize' }}
+                                                            style={{
+                                                                textTransform: 'capitalize'
+                                                            }}
                                                             variant="h5"
                                                             color="text.secondary"
                                                             align='center'>
