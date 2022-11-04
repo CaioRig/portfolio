@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useContext } from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import GlobalStateContext from '../../global/GlobalStateContext';
-import { CircularProgress, Container, Pagination, Stack } from '@mui/material';
+import { CircularProgress, Pagination, Stack } from '@mui/material';
 import { PkmCard } from '../../components/pkmCard';
 
 export const Home = () => {
