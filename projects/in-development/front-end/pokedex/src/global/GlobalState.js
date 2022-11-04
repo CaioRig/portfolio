@@ -13,8 +13,6 @@ const GlobalState = (props) => {
     const [pkmUrl, setUrl] = useState()
     const [pkmData, setData] = useState([])
 
-
-    console.log(pageNumber)
     useEffect(() => {
         setLoading(true)
         let urls = []

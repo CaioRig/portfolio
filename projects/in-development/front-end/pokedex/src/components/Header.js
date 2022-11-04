@@ -16,6 +16,7 @@ import {
   goToPokedex
 } from '../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -74,15 +75,17 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton> */}
-          <Typography
+          <Button
             onClick={() => goToHome(navigate)}
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, display: { xs: 'none', 
+            sm: 'block' 
+          } }}
           >
             POKEMON
-          </Typography>
+          </Button>
           <Typography
             onClick={() => goToPokedex(navigate)}
             variant="h6"
