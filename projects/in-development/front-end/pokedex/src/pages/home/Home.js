@@ -27,8 +27,8 @@ function PkmCard() {
                     .sort(function (a, b) { return a.id - b.id })
                     .map((pkm) => {
                         return (
-                            <Grid2 
-                            xs={3}>
+                            <Grid2
+                                xs={3}>
                                 <Card key={pkm.id}
                                     sx={{
                                         maxWidth: '25vw',

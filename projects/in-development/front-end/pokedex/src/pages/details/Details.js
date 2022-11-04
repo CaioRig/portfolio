@@ -30,7 +30,7 @@ export const Details = () => {
                             bgcolor: bgColors[pkmDetails.types[0].type.name],
                             backgroundImage: `url(${pkmDetails.sprites.other.home.front_default})`,
                             backgroundRepeat: 'no-repeat',
-                            backgroundPosition: 'center'
+                            backgroundPosition: 'center',
                         }}
                         >
                             <Typography
