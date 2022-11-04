@@ -6,20 +6,24 @@ import GlobalStateContext from "./GlobalStateContext";
 
 
 const GlobalState = (props) => {
-    const [apiData, isLoading] = useRequestData(`${BASE_URL}pokemon/?limit=20`)
+    const [pageNumber, setPageNumber] = useState(0)
+    const changePage = (e, value) => setPageNumber((value - 1) * 20)
+    const [apiData, isLoading] = useRequestData(`${BASE_URL}pokemon/?limit=20&offset=${pageNumber}`)
     const [isLoadingGlobal, setLoading] = useState(true)
     const [pkmUrl, setUrl] = useState()
-    const [pkmData, setData] = useState()
+    const [pkmData, setData] = useState([])
 
+
+    console.log(pageNumber)
     useEffect(() => {
         setLoading(true)
         let urls = []
         !isLoading && pkmData &&
-            apiData.results.map((pkm) => {
+            (apiData.results.map((pkm) => {
                 urls.push(pkm.url)
                 setUrl(urls)
                 return null
-            })
+            }))
     }, [apiData])
 
     useEffect(() => {
@@ -31,7 +35,7 @@ const GlobalState = (props) => {
                     .get(url)
                     .then((res) => {
                         individualData.push(res.data)
-                        if (individualData.length >= 19) {
+                        if (individualData.length >= 20) {
                             setLoading(false)
                         }
                     })
@@ -46,7 +50,8 @@ const GlobalState = (props) => {
 
     let globalData = {
         pkmData,
-        isLoadingGlobal
+        isLoadingGlobal,
+        changePage
     }
     return (
         <GlobalStateContext.Provider value={globalData}>
