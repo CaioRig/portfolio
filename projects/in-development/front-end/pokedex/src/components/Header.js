@@ -1,5 +1,8 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
+import {
+  styled,
+  alpha
+} from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -8,7 +11,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import { goToHome } from '../router/Coordinator';
+import {
+  goToHome,
+  goToPokedex
+} from '../router/Coordinator';
 import { useNavigate } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
@@ -78,7 +84,7 @@ export default function Header() {
             POKEMON
           </Typography>
           <Typography
-            onClick={() => goToHome(navigate)}
+            onClick={() => goToPokedex(navigate)}
             variant="h6"
             noWrap
             component="div"

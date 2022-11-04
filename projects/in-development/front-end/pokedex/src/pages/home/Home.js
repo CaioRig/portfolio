@@ -48,7 +48,6 @@ function PkmCard() {
                                     />
                                     <CardContent>
                                         <Typography
-                                            onClick={() => goToDetails(navigate, pkm.name)}
                                             key={pkm.id}
                                             style={{
                                                 textTransform: 'capitalize',
