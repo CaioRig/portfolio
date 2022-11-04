@@ -1,5 +1,5 @@
 export const Pokedex = () =>{
     return(
-        <>UNDER DEVELOPMENT</>
+        <>!UNDER DEVELOPMENT!</>
     )
 }
