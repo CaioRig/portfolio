@@ -83,7 +83,8 @@ export function PkmCard() {
                                     <Button onClick={() => goToDetails(navigate, pkm.name)}
                                         variant='outlined'
                                         color='inherit'
-                                        size="small">
+                                        size="small"
+                                        >
                                         Details
                                     </Button>
                                     <Button variant='outlined'
