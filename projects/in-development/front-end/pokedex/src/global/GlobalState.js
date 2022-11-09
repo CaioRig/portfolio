@@ -8,10 +8,12 @@ import GlobalStateContext from "./GlobalStateContext";
 const GlobalState = (props) => {
     const [pageNumber, setPageNumber] = useState(0)
     const changePage = (e, value) => setPageNumber((value - 1) * 20)
+
     const [apiData, isLoading] = useRequestData(`${BASE_URL}pokemon/?limit=20&offset=${pageNumber}`)
     const [isLoadingGlobal, setLoading] = useState(true)
     const [pkmUrl, setUrl] = useState()
     const [pkmData, setData] = useState([])
+
     const [selectedPokedex, setSelectedPokedex] = useState([])
 
     useEffect(() => {
@@ -34,6 +36,7 @@ const GlobalState = (props) => {
                     .get(url)
                     .then((res) => {
                         individualData.push(res.data)
+                        console.log(individualData)
                         if (individualData.length >= 20) {
                             setLoading(false)
                         }
@@ -54,12 +57,21 @@ const GlobalState = (props) => {
         selectedData.push(...selectedPokedex, pkmData[selectedIndex])
         setSelectedPokedex(selectedData)
     }
+    const removeFromPokedex = (pokeName) => {
+        const selectedIndex = selectedPokedex.findIndex((pokemon) => {
+            return pokemon.name === pokeName
+        })
+        const oldSelected = [... selectedPokedex]
+        oldSelected.splice(selectedIndex,1)
+        setSelectedPokedex(oldSelected)
+    }
 
     let globalData = {
         pkmData,
         isLoadingGlobal,
         changePage,
         addToPokedex,
+        removeFromPokedex,
         selectedPokedex
     }
     return (
