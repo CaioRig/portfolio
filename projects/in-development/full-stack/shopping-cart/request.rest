@@ -1,0 +1,54 @@
+### GET PRODUCT BY ID
+GET http://localhost:3306/products/id
+Content-Type: application/json
+
+{
+    "id": "1" 
+}
+
+### GET PRODUCT BY NAME
+GET http://localhost:3306/products/name
+Content-Type: application/json
+
+{
+    "name": "agua"
+}
+
+### GET PRODUCT BY PRICE
+GET http://localhost:3306/products/price    
+Content-Type: application/json
+
+{
+    "price": 2.99,
+    "orderBy": "desc"
+}
+
+### GET PRODUCT BY QUANTITY IN STOCK
+GET http://localhost:3306/products/qty   
+Content-Type: application/json
+
+{
+    "qty": 200,
+    "orderBy": "desc"
+}
+
+### CREATE USER 
+POST http://localhost:3306/users/create
+Content-Type: application/json
+
+{
+    "userName": "testonildo",
+    "email": "testonildo@email.com",
+    "nickname": "testo",
+    "password": "123test321",
+    "role": "NORMAL"
+}
+
+### CREATE ORDER
+POST http://localhost:3306/cart/create
+Content-Type: application/json
+
+{
+    "productId": 18,
+    "productQty": 3
+}

@@ -5,8 +5,8 @@ Project created for studying purposes which consumes data from a pokedex API (ht
 
 Projeto criado para propósitos de estudo que consome data de uma API de pokedex (https://pokeapi.co/).
 
-Try it out - Experimente:
-[Pokedex](https://synonymous-care.surge.sh/)
+# Try it out - Experimente:
+# [Pokedex](https://squalid-harmony.surge.sh/)
 
 ### Developer / Desenvolvedor: 
 - Caio Sala Rigotto
@@ -17,7 +17,7 @@ Try it out - Experimente:
     Página Home
 - [x] Pokemon cards with name and type information <br/>
     Cards de pokemon com informações de nome e tipo
-- [ ] Details page showing pokemon status, moves and type information <br/>
+- [x] Details page showing pokemon status, moves and type information <br/>
     Página de detalhes mostrando informações de status, golpes e tipos 
 - [ ] Pokedex page which you can save pokemons for future research <br/>
     Página de pokedex onde você pode salvar pokemons para pesquisas futuras
