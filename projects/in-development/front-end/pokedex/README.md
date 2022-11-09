@@ -23,6 +23,8 @@ Projeto criado para propósitos de estudo que consome data de uma API de pokedex
     Página de pokedex onde você pode salvar pokemons para pesquisas futuras
 - [ ] Search function which filters pokemons based on search parameters <br/>
     Funcionalidade de pesquisa que filtra pokemons de acordo com os parâmetros de busca
+- [ ] Styling and responsivity
+    Estilização e responsividade
 
 ### 🛠 Technologies / Tecnologias:
 
