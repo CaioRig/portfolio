@@ -19,8 +19,8 @@ Projeto criado para propósitos de estudo que consome data de uma API de pokedex
     Cards de pokemon com informações de nome e tipo
 - [x] Details page showing pokemon status, moves and type information <br/>
     Página de detalhes mostrando informações de status, golpes e tipos 
-- [ ] Pokedex page which you can save pokemons for future research <br/>
-    Página de pokedex onde você pode salvar pokemons para pesquisas futuras
+- [x] Pokedex page which you can save pokemons for future research (POC) <br/>
+    Página de pokedex onde você pode salvar pokemons para pesquisas futuras (POC)
 - [ ] Search function which filters pokemons based on search parameters <br/>
     Funcionalidade de pesquisa que filtra pokemons de acordo com os parâmetros de busca
 - [ ] Styling and responsivity <br/>
