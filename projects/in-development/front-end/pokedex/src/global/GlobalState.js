@@ -6,20 +6,25 @@ import GlobalStateContext from "./GlobalStateContext";
 
 
 const GlobalState = (props) => {
-    const [apiData, isLoading] = useRequestData(`${BASE_URL}pokemon/?limit=20`)
+    const [pageNumber, setPageNumber] = useState(0)
+    const changePage = (e, value) => setPageNumber((value - 1) * 20)
+
+    const [apiData, isLoading] = useRequestData(`${BASE_URL}pokemon/?limit=20&offset=${pageNumber}`)
     const [isLoadingGlobal, setLoading] = useState(true)
     const [pkmUrl, setUrl] = useState()
-    const [pkmData, setData] = useState()
+    const [pkmData, setData] = useState([])
+
+    const [selectedPokedex, setSelectedPokedex] = useState([])
 
     useEffect(() => {
         setLoading(true)
         let urls = []
         !isLoading && pkmData &&
-            apiData.results.map((pkm) => {
+            (apiData.results.map((pkm) => {
                 urls.push(pkm.url)
                 setUrl(urls)
                 return null
-            })
+            }))
     }, [apiData])
 
     useEffect(() => {
@@ -32,7 +37,7 @@ const GlobalState = (props) => {
                     .then((res) => {
                         individualData.push(res.data)
                         console.log(individualData)
-                        if (individualData.length >= 19) {
+                        if (individualData.length >= 20) {
                             setLoading(false)
                         }
                     })
@@ -44,10 +49,30 @@ const GlobalState = (props) => {
         setData(individualData)
     }, [pkmUrl])
 
+    const addToPokedex = (pokeName) => {
+        const selectedIndex = pkmData.findIndex((pokemon) => {
+            return pokemon.name === pokeName
+        })
+        const selectedData = []
+        selectedData.push(...selectedPokedex, pkmData[selectedIndex])
+        setSelectedPokedex(selectedData)
+    }
+    const removeFromPokedex = (pokeName) => {
+        const selectedIndex = selectedPokedex.findIndex((pokemon) => {
+            return pokemon.name === pokeName
+        })
+        const oldSelected = [... selectedPokedex]
+        oldSelected.splice(selectedIndex,1)
+        setSelectedPokedex(oldSelected)
+    }
 
     let globalData = {
         pkmData,
-        isLoadingGlobal
+        isLoadingGlobal,
+        changePage,
+        addToPokedex,
+        removeFromPokedex,
+        selectedPokedex
     }
     return (
         <GlobalStateContext.Provider value={globalData}>

@@ -8,7 +8,7 @@ const useRequestData = (url) => {
     useEffect(() => {
         setLoading(true)
 
-        const fetchData = async () => {
+        const fetchData = async (url) => {
             await axios
                 .get(url)
                 .then((res) => {
@@ -17,10 +17,9 @@ const useRequestData = (url) => {
                 })
         }
 
-        fetchData()
+        fetchData(url)
             .catch((err) => {
                 alert(err)
-                setLoading(false)
             })
     }, [url])
     return [data, isLoading]
