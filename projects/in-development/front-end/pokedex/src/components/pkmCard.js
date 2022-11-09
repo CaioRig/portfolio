@@ -87,7 +87,9 @@ export function PkmCard() {
                                         >
                                         Details
                                     </Button>
-                                    <Button variant='outlined'
+                                    <Button 
+                                    onClick={() => data.addToPokedex(pkm.name)}
+                                    variant='outlined'
                                         color='inherit'
                                         size="small">
                                         Add To Pokedex

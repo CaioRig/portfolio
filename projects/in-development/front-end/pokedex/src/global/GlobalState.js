@@ -12,6 +12,7 @@ const GlobalState = (props) => {
     const [isLoadingGlobal, setLoading] = useState(true)
     const [pkmUrl, setUrl] = useState()
     const [pkmData, setData] = useState([])
+    const [selectedPokedex, setSelectedPokedex] = useState([])
 
     useEffect(() => {
         setLoading(true)
@@ -45,11 +46,21 @@ const GlobalState = (props) => {
         setData(individualData)
     }, [pkmUrl])
 
+    const addToPokedex = (pokeName) => {
+        const selectedIndex = pkmData.findIndex((pokemon) => {
+            return pokemon.name === pokeName
+        })
+        const selectedData = []
+        selectedData.push(...selectedPokedex, pkmData[selectedIndex])
+        setSelectedPokedex(selectedData)
+    }
 
     let globalData = {
         pkmData,
         isLoadingGlobal,
-        changePage
+        changePage,
+        addToPokedex,
+        selectedPokedex
     }
     return (
         <GlobalStateContext.Provider value={globalData}>
