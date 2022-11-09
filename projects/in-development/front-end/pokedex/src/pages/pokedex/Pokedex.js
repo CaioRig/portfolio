@@ -18,88 +18,95 @@ export const Pokedex = () => {
     const data = useContext(GlobalStateContext)
     console.log(data.selectedPokedex)
     return (
-        <>{
-            data.selectedPokedex
-                .sort(function (a, b) { return a.id - b.id })
-                .map((pkm) => {
-                    return (
-                        <Grid2
-                            xs={3}>
-                            <Card key={pkm.id}
-                                sx={{
-                                    maxWidth: '25vw',
-                                    minHeight: '90%',
-                                    backgroundColor: bgColors[pkm.types[0].type.name],
-                                    backgroundImage: `url(${pokeballLogo})`,
-                                    backgroundRepeat: "no-repeat",
-                                    backgroundPosition: "center",
-                                    backgroundSize: "85%"
-                                }}>
-                                <CardMedia
-
-                                    component="img"
-                                    height="100%"
-                                    image={pkm.sprites.versions["generation-v"]["black-white"].animated.front_default}
-                                    alt={pkm.name}
-                                />
-                                <CardContent>
-                                    <Typography
-                                        key={pkm.id}
-                                        style={{
-                                            textTransform: 'capitalize',
-                                        }}
-                                        gutterBottom
-                                        variant="h5"
-                                        component="div"
-                                        align='center'>
-                                        #{pkm.id} {pkm.name}
-                                    </Typography>
-                                    <Container sx={{
-                                        display: "flex",
-                                        justifyContent: "space-evenly"
+        <Grid2 container
+            spacing={3}
+            disableEqualOverflow
+            style={{
+                marginTop: '1vh',
+                display: 'flex',
+                flexDirection: 'column'
+            }}
+        >{
+                data.selectedPokedex
+                    .sort(function (a, b) { return a.id - b.id })
+                    .map((pkm) => {
+                        return (
+                            <Grid2
+                                xs={3}>
+                                <Card key={pkm.id}
+                                    sx={{
+                                        maxWidth: '80vw',
+                                        minHeight: '20%',
+                                        backgroundColor: bgColors[pkm.types[0].type.name],
+                                        backgroundImage: `url(${pokeballLogo})`,
+                                        backgroundRepeat: "no-repeat",
+                                        backgroundPosition: "center",
+                                        backgroundSize: "85%"
                                     }}>
-                                        {
-                                            pkm.types.map((type) => {
-                                                return <>
-                                                    <Typography
-                                                        key={type.type.name}
-                                                        style={{
-                                                            textTransform: 'capitalize'
-                                                        }}
-                                                        variant="h5"
-                                                        color="text.secondary"
-                                                        align='center'>
-                                                        {type.type.name}
-                                                    </Typography>
-                                                </>
-                                            })
-                                        }
-                                    </Container>
-                                </CardContent>
-                                <CardActions style={{
-                                    display: 'flex',
-                                    justifyContent: 'space-around'
-                                }}>
-                                    <Button
-                                        variant='outlined'
-                                        color='inherit'
-                                        size="small"
-                                    >
-                                        Details
-                                    </Button>
-                                    <Button
-                                        onClick={() => data.removeFromPokedex(pkm.name)}
-                                        variant='outlined'
-                                        color='inherit'
-                                        size="small">
-                                        Remove from Pokedex
-                                    </Button>
-                                </CardActions>
-                            </Card>
-                        </Grid2>
-                    )
-                })
-        }
-        </>
+                                    <CardMedia
+                                        component="img"
+                                        height="100%"
+                                        image={pkm.sprites.versions["generation-v"]["black-white"].animated.front_default}
+                                        alt={pkm.name}
+                                    />
+                                    <CardContent>
+                                        <Typography
+                                            key={pkm.id}
+                                            style={{
+                                                textTransform: 'capitalize',
+                                            }}
+                                            gutterBottom
+                                            variant="h5"
+                                            component="div"
+                                            align='center'>
+                                            #{pkm.id} {pkm.name}
+                                        </Typography>
+                                        <Container sx={{
+                                            display: "flex",
+                                            justifyContent: "space-evenly"
+                                        }}>
+                                            {
+                                                pkm.types.map((type) => {
+                                                    return <>
+                                                        <Typography
+                                                            key={type.type.name}
+                                                            style={{
+                                                                textTransform: 'capitalize'
+                                                            }}
+                                                            variant="h5"
+                                                            color="text.secondary"
+                                                            align='center'>
+                                                            {type.type.name}
+                                                        </Typography>
+                                                    </>
+                                                })
+                                            }
+                                        </Container>
+                                    </CardContent>
+                                    <CardActions style={{
+                                        display: 'flex',
+                                        justifyContent: 'space-around'
+                                    }}>
+                                        <Button
+                                            variant='outlined'
+                                            color='inherit'
+                                            size="small"
+                                        >
+                                            Details
+                                        </Button>
+                                        <Button
+                                            onClick={() => data.removeFromPokedex(pkm.name)}
+                                            variant='outlined'
+                                            color='inherit'
+                                            size="small">
+                                            Remove from Pokedex
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            </Grid2>
+                        )
+                    })
+            }
+        </Grid2>
     )
 }
