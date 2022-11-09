@@ -6,7 +6,7 @@ Project created for studying purposes which consumes data from a pokedex API (ht
 Projeto criado para propósitos de estudo que consome data de uma API de pokedex (https://pokeapi.co/).
 
 # Try it out - Experimente:
-[Pokedex](https://sweet-spoon.surge.sh/)
+# [Pokedex](https://sweet-spoon.surge.sh/)
 
 ### Developer / Desenvolvedor: 
 - Caio Sala Rigotto
