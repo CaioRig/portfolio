@@ -16,7 +16,7 @@ import Typography from '@mui/material/Typography';
 
 export const Pokedex = () => {
     const data = useContext(GlobalStateContext)
-    console.log(data.selectedPokedex)
+    
     return (
         <Grid2 container
             spacing={3}
@@ -62,7 +62,7 @@ export const Pokedex = () => {
                                             #{pkm.id} {pkm.name}
                                         </Typography>
                                         <Container sx={{
-                                            display: "flex",
+                                            // display: "flex",
                                             justifyContent: "space-evenly"
                                         }}>
                                             {
@@ -87,13 +87,13 @@ export const Pokedex = () => {
                                         display: 'flex',
                                         justifyContent: 'space-around'
                                     }}>
-                                        <Button
+                                        {/* <Button
                                             variant='outlined'
                                             color='inherit'
                                             size="small"
                                         >
                                             Details
-                                        </Button>
+                                        </Button> */}
                                         <Button
                                             onClick={() => data.removeFromPokedex(pkm.name)}
                                             variant='outlined'

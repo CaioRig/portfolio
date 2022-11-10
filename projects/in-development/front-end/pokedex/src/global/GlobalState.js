@@ -36,7 +36,6 @@ const GlobalState = (props) => {
                     .get(url)
                     .then((res) => {
                         individualData.push(res.data)
-                        console.log(individualData)
                         if (individualData.length >= 20) {
                             setLoading(false)
                         }
@@ -55,6 +54,7 @@ const GlobalState = (props) => {
         })
         const selectedData = []
         selectedData.push(...selectedPokedex, pkmData[selectedIndex])
+        alert("Pokemon added to Pokedex!")
         setSelectedPokedex(selectedData)
     }
     const removeFromPokedex = (pokeName) => {
@@ -63,6 +63,7 @@ const GlobalState = (props) => {
         })
         const oldSelected = [... selectedPokedex]
         oldSelected.splice(selectedIndex,1)
+        alert("Pokemon removed from Pokedex!")
         setSelectedPokedex(oldSelected)
     }
 
