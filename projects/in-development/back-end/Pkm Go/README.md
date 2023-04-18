@@ -1,8 +1,8 @@
-# Projeto Pokemon Go
+# Pokemon Go Database Backend
 
-Projeto back-end que cadastra as informações de pokemons do jogo Pokemon Go em um banco de dados e as torna disponíveis para consumo
+Este é um projeto de back-end que permite cadastrar e armazenar informações sobre os Pokemons do popular jogo mobile Pokemon Go em um banco de dados. As informações dos Pokemons registrados podem ser consumidas por meio de APIs.
 
-Back-end project that registers the information of Pokemon from the Pokemon Go game into a database and makes them available for consumption
+This is a back-end project that allows you to register and store information about Pokemon from the popular mobile game Pokemon Go into a database. The registered Pokemon information can be consumed via APIs.
 
 ### Desenvolvedor: 
 - Caio Sala Rigotto
