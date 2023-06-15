@@ -19,6 +19,6 @@ I am a Full Stack Web Developer with over 1000 hours of practical coding experie
 # Conquistas
 
 ## III Hackaton deco.cx
-Time aprovado entre os entre os finalistas em um Hackathon com mais de 250 equipes.
+Time aprovado entre os finalistas em um Hackathon com mais de 250 equipes.
 ![Deco Aprovados Segunda Fase](https://github.com/CaioRig/portfolio/assets/93120693/729d6866-53b3-4bcd-a055-61b11131bc77)
 
